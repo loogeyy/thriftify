@@ -1,0 +1,83 @@
+.offers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .offers-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .description-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .white-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  
+  .nav-buttons {
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  
+  .store-list {
+    width: 100%;
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+  
+  .store-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .store-item {
+    width: 200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .store-name {
+    font-weight: bold;
+  }
+  
+  .store-info {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
