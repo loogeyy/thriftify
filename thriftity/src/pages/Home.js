@@ -6,18 +6,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = () => {
     return (
-      <div>
-        <Row>
-          <Col> <h2>Thriftity</h2> </Col>
-        </Row>
-        
-        <div class='fixed-bottom nav-bar'>
-          <Row>
-            <Col> <button class='button'><Link to="/Upload">Start Uploading</Link></button> </Col>
-            <Col> <button class='button'><Link to="/Offers">View Offers</Link></button> </Col>
-          </Row>
+      <div className="App">
+      <header className="App-header">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+            <h1 className="logo-text">thriftify</h1>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12 text-center">
+            <img src="logo.png" alt="map with hanger logo"></img>
+            </div>
         </div>
-      </div>
+        </div>
+        </header>
+        <div className="row button-container">
+            <div className="col-7">
+              <Link to="/upload" className="btn btn-block upload-listing">
+                upload listing
+              </Link>
+              </div>
+            <div className="col-3">
+              <Link to="/offers" className="btn btn-block view-listings">
+                view listings
+              </Link>
+            </div>
+        </div>
+     </div>   
     );
   };
 
