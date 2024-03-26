@@ -31,18 +31,5 @@
   background-color: #F5F5F5;
 }
 
-.upload-listing,
-.view-listings {
-  display: inline-block;
-  width: auto;
-  padding: 10px 20px;
-  margin: 5px;
-  background-color: E5E1EB;
-  border: none;
-  color: #3C0E61;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 200px;
-  margin-bottom: 10px;
-}
+
 
