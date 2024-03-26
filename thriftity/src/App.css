@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nav-bar {
+  background-color: lavender;
+}
+
+.fixed-bottom {
+  margin: 10px;
+}
+
+.button {
+  border: none;
+  text-align: center;
+  background-color: lavender;
+  color: white;
+}
+
+.button:hover {
+  background-color: powderblue;
+}
