@@ -20,7 +20,7 @@
   
   .card {
     width: 300px;
-    height: 200px;
+    height: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
@@ -52,32 +52,38 @@
   
   .store-list {
     width: 100%;
-    max-height: 200px; /* Adjust the height as needed */
+    margin-top: 20px;
+  }
+  
+  .scrollable-container {
+    width: 100%;
+    max-height: 350px; /* Adjust max height as needed */
     overflow-y: auto;
   }
   
-  .store-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
   .store-item {
-    width: 200px;
+    width: calc(33.33% - 20px); /* Each item takes up about one-third of the container */
+    margin-right: 20px;
+    margin-bottom: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
   }
   
   .store-name {
     font-weight: bold;
   }
   
-  .store-info {
+  .store-price {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .store-distance {
     font-size: 0.9rem;
-    margin-top: 5px;
+    color: #666;
   }
   
