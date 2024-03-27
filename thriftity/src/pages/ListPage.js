@@ -8,7 +8,7 @@ function ListPage({ clothesList }) {
         <ul>
             {clothesList.map((clothes, index) => (
             <li key={index}>
-                Type: {clothes.type}, Size: {clothes.size}, Color: {clothes.color}, Brand: {clothes.brand}
+                Item: {clothes.item}, Category: {clothes.category}, Size: {clothes.size}, Color: {clothes.color}, Brand: {clothes.brand}
             </li>
             ))}
         </ul>
