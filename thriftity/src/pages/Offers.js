@@ -42,8 +42,8 @@ const Offers = ({ clothesList }) => {
         )}
         <button className="nav-button next" onClick={handleNextClick}>{'>'}</button>
       </div>
+      <div className="matches-header">Matches for this Item:</div>
       <div className="store-list-container">
-        <h3 className="matches-header">Matches for this Offer:</h3>
         <div className="store-list">
           {storeData.map((store, index) => (
             <div key={index} className="store-item">
