@@ -3,33 +3,33 @@ import Navbar from '../components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Offers.css';
 
-const Offers = () => {
-  const cardsData = [
-    {
-      title: 'Offer 1',
-      description: 'Description for Offer 1. More details can be added here.',
-      category: 'Category 1',
-      color: 'Red',
-      size: 'M',
-      brand: 'Brand X',
-    },
-    {
-      title: 'Offer 2',
-      description: 'Description for Offer 2. More details can be added here.',
-      category: 'Category 2',
-      color: 'Blue',
-      size: 'L',
-      brand: 'Brand Y',
-    },
-    {
-      title: 'Offer 3',
-      description: 'Description for Offer 3. More details can be added here.',
-      category: 'Category 1',
-      color: 'Green',
-      size: 'S',
-      brand: 'Brand Z',
-    },
-  ];
+const Offers = ({ clothesList }) => {
+  // const cardsData = [
+  //   {
+  //     title: 'Offer 1',
+  //     description: 'Description for Offer 1. More details can be added here.',
+  //     category: 'Category 1',
+  //     color: 'Red',
+  //     size: 'M',
+  //     brand: 'Brand X',
+  //   },
+  //   {
+  //     title: 'Offer 2',
+  //     description: 'Description for Offer 2. More details can be added here.',
+  //     category: 'Category 2',
+  //     color: 'Blue',
+  //     size: 'L',
+  //     brand: 'Brand Y',
+  //   },
+  //   {
+  //     title: 'Offer 3',
+  //     description: 'Description for Offer 3. More details can be added here.',
+  //     category: 'Category 1',
+  //     color: 'Green',
+  //     size: 'S',
+  //     brand: 'Brand Z',
+  //   },
+  // ];
 
   const storeData = [
     { name: 'Store A', price: '$10', distance: '5 miles' },
@@ -43,11 +43,11 @@ const Offers = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   const handlePrevClick = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + cardsData.length) % cardsData.length);
+    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + clothesList.length) % clothesList.length);
   };
 
   const handleNextClick = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
+    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % clothesList.length);
   };
 
   return (
@@ -55,14 +55,17 @@ const Offers = () => {
       <h2 className="offers-title">Offers</h2>
       <div className="centered-box">
         <button className="nav-button prev" onClick={handlePrevClick}>{'<'}</button>
-        <div className="card">
-          <h2>{cardsData[currentCardIndex].title}</h2>
-          <p>{cardsData[currentCardIndex].description}</p>
-          <p>Category: {cardsData[currentCardIndex].category}</p>
-          <p>Color: {cardsData[currentCardIndex].color}</p>
-          <p>Size: {cardsData[currentCardIndex].size}</p>
-          <p>Brand: {cardsData[currentCardIndex].brand}</p>
-        </div>
+        {clothesList && clothesList.length > 0 && (
+          <div className="card">
+            <h2>{clothesList[currentCardIndex].title}</h2>
+            <p>{clothesList[currentCardIndex].description}</p>
+            <p>Item: {clothesList[currentCardIndex].item}</p>
+            <p>Category: {clothesList[currentCardIndex].category}</p>
+            <p>Color: {clothesList[currentCardIndex].color}</p>
+            <p>Size: {clothesList[currentCardIndex].size}</p>
+            <p>Brand: {clothesList[currentCardIndex].brand}</p>
+          </div>
+        )}
         <button className="nav-button next" onClick={handleNextClick}>{'>'}</button>
       </div>
       <div className="store-list-container">
