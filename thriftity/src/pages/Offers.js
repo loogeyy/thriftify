@@ -4,32 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Offers.css';
 
 const Offers = ({ clothesList }) => {
-  // const cardsData = [
-  //   {
-  //     title: 'Offer 1',
-  //     description: 'Description for Offer 1. More details can be added here.',
-  //     category: 'Category 1',
-  //     color: 'Red',
-  //     size: 'M',
-  //     brand: 'Brand X',
-  //   },
-  //   {
-  //     title: 'Offer 2',
-  //     description: 'Description for Offer 2. More details can be added here.',
-  //     category: 'Category 2',
-  //     color: 'Blue',
-  //     size: 'L',
-  //     brand: 'Brand Y',
-  //   },
-  //   {
-  //     title: 'Offer 3',
-  //     description: 'Description for Offer 3. More details can be added here.',
-  //     category: 'Category 1',
-  //     color: 'Green',
-  //     size: 'S',
-  //     brand: 'Brand Z',
-  //   },
-  // ];
 
   const storeData = [
     { name: 'Store A', price: '$10', distance: '5 miles' },
