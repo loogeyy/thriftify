@@ -6,24 +6,24 @@ import './Offers.css';
 const Offers = () => {
   const cardsData = [
     {
-      title: 'Offer 1',
-      description: 'Description for Offer 1. More details can be added here.',
+      title: 'Shirt',
+      description: 'Description for Shirt. More details can be added here.',
       category: 'Category 1',
       color: 'Red',
       size: 'M',
       brand: 'Brand X',
     },
     {
-      title: 'Offer 2',
-      description: 'Description for Offer 2. More details can be added here.',
+      title: 'Pants',
+      description: 'Description for Pants. More details can be added here.',
       category: 'Category 2',
       color: 'Blue',
       size: 'L',
       brand: 'Brand Y',
     },
     {
-      title: 'Offer 3',
-      description: 'Description for Offer 3. More details can be added here.',
+      title: 'Dress',
+      description: 'Description for Dress. More details can be added here.',
       category: 'Category 1',
       color: 'Green',
       size: 'S',
@@ -65,8 +65,8 @@ const Offers = () => {
         </div>
         <button className="nav-button next" onClick={handleNextClick}>{'>'}</button>
       </div>
+      <div className="matches-header">Matches for this Item:</div>
       <div className="store-list-container">
-        <h3 className="matches-header">Matches for this Offer:</h3>
         <div className="store-list">
           {storeData.map((store, index) => (
             <div key={index} className="store-item">
