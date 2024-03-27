@@ -1,11 +1,94 @@
-import Navbar from '../components/Navbar.js';
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Offers.css';
 
 const Offers = () => {
+  const cardsData = [
+    {
+      title: 'Offer 1',
+      description: 'Description for Offer 1. More details can be added here.',
+      category: 'Category 1',
+      color: 'Red',
+      size: 'M',
+      brand: 'Brand X',
+    },
+    {
+      title: 'Offer 2',
+      description: 'Description for Offer 2. More details can be added here.',
+      category: 'Category 2',
+      color: 'Blue',
+      size: 'L',
+      brand: 'Brand Y',
+    },
+    {
+      title: 'Offer 3',
+      description: 'Description for Offer 3. More details can be added here.',
+      category: 'Category 1',
+      color: 'Green',
+      size: 'S',
+      brand: 'Brand Z',
+    },
+  ];
+
+  const storeData = [
+    { name: 'Store A', price: '$10', distance: '5 miles' },
+    { name: 'Store B', price: '$15', distance: '8 miles' },
+    { name: 'Store C', price: '$12', distance: '3 miles' },
+    { name: 'Store D', price: '$20', distance: '10 miles' },
+    { name: 'Store E', price: '$18', distance: '6 miles' },
+    { name: 'Store F', price: '$25', distance: '12 miles' },
+  ];
+
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + cardsData.length) % cardsData.length);
+  };
+
+  const handleNextClick = () => {
+    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
+  };
+
   return (
-    
-    <div>
-      <h2>Offers</h2>
-      {/* Content*/}
+    <div className="container offers-container">
+      <h2 className="offers-title">Offers</h2>
+      <div className="centered-box">
+        <button className="nav-button prev" onClick={handlePrevClick}>{'<'}</button>
+        <div className="card">
+          <h2>{cardsData[currentCardIndex].title}</h2>
+          <p>{cardsData[currentCardIndex].description}</p>
+          <p>Category: {cardsData[currentCardIndex].category}</p>
+          <p>Color: {cardsData[currentCardIndex].color}</p>
+          <p>Size: {cardsData[currentCardIndex].size}</p>
+          <p>Brand: {cardsData[currentCardIndex].brand}</p>
+        </div>
+        <button className="nav-button next" onClick={handleNextClick}>{'>'}</button>
+      </div>
+      <div className="store-list-container">
+        <h3 className="matches-header">Matches for this Offer:</h3>
+        <div className="store-list">
+          {storeData.map((store, index) => (
+            <div key={index} className="store-item">
+              <div className="row">
+                <div className="col-3">
+                  <p className="store-price">{store.price}</p>
+                </div>
+                <div className="col-9">
+                  <div className="row">
+                    <div className="col-12">
+                      <p className="store-name">{store.name}</p>
+                    </div>
+                    <div className="col-12">
+                      <p className="store-distance">{store.distance}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       <Navbar />
     </div>
   );
