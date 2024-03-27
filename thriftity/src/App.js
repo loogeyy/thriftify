@@ -1,18 +1,31 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Home from './pages/Home';
 import Offers from './pages/Offers';
-import Upload from './pages/Upload';
+import UploadPage from './pages/UploadPage';
+import ListPage from './pages/ListPage';
+
+import React, { useState } from 'react';
+// import UploadPage from './UploadPage';
+// import ListPage from './ListPage';
+// import Navbar from '../components/Navbar.js';
 
 function App() {
+  const [clothesList, setClothesList] = useState([]);
+
+  const addClothes = (clothes) => {
+    setClothesList([...clothesList, clothes]);
+  };
+
   return (
     <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/offers" element={<Offers />} />
-          <Route path="/upload" element={<Upload/>} />
+          <Route path="/uploadPage" element={<UploadPage addClothes={addClothes}/>} />
+          <Route path="/listPage" element={<ListPage clothesList={clothesList} />} />
         </Routes>
     </Router>
   );
