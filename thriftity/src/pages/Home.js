@@ -23,7 +23,7 @@ const Home = () => {
         </header>
         <div className="row button-container">
             <div className="col-7">
-              <Link to="/upload" className="btn btn-block upload-listing">
+              <Link to="/UploadPage" className="btn btn-block upload-listing">
                 upload listing
               </Link>
               </div>
