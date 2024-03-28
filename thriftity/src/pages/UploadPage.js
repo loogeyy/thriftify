@@ -78,7 +78,7 @@ function UploadPage({ addClothes }) {
             <label htmlFor="brand">Brand:</label>
             <input type="text" id="brand" value={brand} onChange={handleBrandChange} required />
           </div>
-          <button type="submit">Save</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
       <Navbar />
