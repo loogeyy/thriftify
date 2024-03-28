@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './UploadPage.css'; // Import CSS file
 import Navbar from '../components/Navbar.js';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/BackButton.js';
 
 function UploadPage({ addClothes }) {
   const [item, setItem] = useState('');

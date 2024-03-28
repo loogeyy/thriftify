@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import leftArrow from '../images/left-arrow.png';
+import leftArrow from 'left-arrow.png';
 import './BackButton.css';
 
 const BackButton = () => {
@@ -7,7 +7,7 @@ const BackButton = () => {
     <div class='back-button'>
         <div className="container">
             <div className="row">
-                <Link to="/" style={{ textDecoration: 'none' }}>
+                <Link to="/thriftify" style={{ textDecoration: 'none' }}>
                     <div className="col">
                     <img class='back-button-icon' src={leftArrow} alt="Left Arrow" />
                     </div>

@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar.js';
-import BackButton from '../components/BackButton';
-import soldIcon from '../images/sold-icon.png';
+import BackButton from '../components/BackButton.js';
+import soldIcon from 'sold-icon.png';
 import './ListPage.css';
 
 function ListPage({ clothesList, removeClothes }) {

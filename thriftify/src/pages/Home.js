@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
+import logoIcon from 'logo.png';
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
           <Row className="justify-content-center align-items-center">
             <Col xs={12} className="text-center">
               <h1 className="logo-text">thriftity</h1>
-              <img src="logo.png" alt="map with hanger logo" className="img-fluid" />
+              <img src={logoIcon} alt="map with hanger logo" className="img-fluid" />
             </Col>
           </Row>
           <Row className="justify-content-center align-items-center">
