@@ -13,7 +13,7 @@ const Home = () => {
         <Container>
           <Row className="justify-content-center align-items-center">
             <Col xs={12} className="text-center">
-              <h1 className="logo-text">thriftity</h1>
+              <h1 className="logo-text">thriftify</h1>
               <img src={logoIcon} alt="map with hanger logo" className="img-fluid" />
             </Col>
           </Row>
