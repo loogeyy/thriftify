@@ -17,6 +17,14 @@
     margin-bottom: 20px;
   }
   
+  .blank-card {
+    background-color: rgb(231, 231, 241);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    color: #3C0E61;
+  }
+
   .card {
     background-color: rgb(231, 231, 241);
     border: 1px solid #ccc;
@@ -25,15 +33,24 @@
     color: #3C0E61;
   }
 
-  .nav-button {
+  .button:focus,
+  .button:active {
+    outline: none;
+    box-shadow:none;
     background-color: #f5f5f5;
+  }
+
+  .card-btn {
+    color: #3C0E61;
+    border-radius: 5px;
+    outline: none;
+    box-shadow:none;
+    background-color: transparent;
     background: transparent;
     border: none;
-    color:#3C0E61;
     font-size: 24px;
-    cursor: pointer;
   }
-  
+
   .prev {
     margin-left: 10px;
   }
@@ -43,7 +60,7 @@
   }
   
   .store-list-container {
-    max-height: 300px;
+    max-height: 50px;
     overflow-y: auto;
     margin-bottom: 40px;
   }
@@ -70,7 +87,7 @@
   }
   
   .card-body {
-    padding: 25px;
+    padding: 15px;
   }
   
   .store-price {

@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Offers.css';
 
 const Offers = ({ clothesList }) => {
-
   const storeData = [
     { name: 'Store A', price: '$10', distance: '5 miles' },
     { name: 'Store B', price: '$15', distance: '8 miles' },
@@ -18,11 +17,15 @@ const Offers = ({ clothesList }) => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   const handlePrevClick = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + clothesList.length) % clothesList.length);
+    if (clothesList && clothesList.length > 1) {
+      setCurrentCardIndex((prevIndex) => (prevIndex - 1 + clothesList.length) % clothesList.length);
+    }
   };
 
   const handleNextClick = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % clothesList.length);
+    if (clothesList && clothesList.length > 1) {
+      setCurrentCardIndex((prevIndex) => (prevIndex + 1) % clothesList.length);
+    }
   };
 
   return (
@@ -30,8 +33,8 @@ const Offers = ({ clothesList }) => {
       <BackButton />
       <h2 className="offers-title">Offers</h2>
       <div className="centered-box">
-        <button className="nav-button prev" onClick={handlePrevClick}>{'<'}</button>
-        {clothesList && clothesList.length > 0 && (
+        <button className="card-btn prev" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>{'<'}</button>
+        {clothesList && clothesList.length > 0 ? (
           <div className="card">
             <h2>{clothesList[currentCardIndex].title}</h2>
             <p>{clothesList[currentCardIndex].description}</p>
@@ -41,8 +44,12 @@ const Offers = ({ clothesList }) => {
             <p>Size: {clothesList[currentCardIndex].size}</p>
             <p>Brand: {clothesList[currentCardIndex].brand}</p>
           </div>
+        ) : (
+          <div className="blank-card">
+            <p>No items added, please go to the upload screen to add an item.</p>
+          </div>
         )}
-        <button className="nav-button next" onClick={handleNextClick}>{'>'}</button>
+        <button className="card-btn next" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>{'>'}</button>
       </div>
       <div className="matches-header">Matches for this Item:</div>
       <div className="store-list-container">
@@ -74,3 +81,4 @@ const Offers = ({ clothesList }) => {
 };
 
 export default Offers;
+
