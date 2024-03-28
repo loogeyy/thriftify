@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import BackButton from '../components/BackButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Offers.css';
 
@@ -26,6 +27,7 @@ const Offers = ({ clothesList }) => {
 
   return (
     <div className="container offers-container">
+      <BackButton />
       <h2 className="offers-title">Offers</h2>
       <div className="centered-box">
         <button className="nav-button prev" onClick={handlePrevClick}>{'<'}</button>

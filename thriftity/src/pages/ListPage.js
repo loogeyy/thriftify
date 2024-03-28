@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar.js';
+import BackButton from '../components/BackButton';
 import soldIcon from '../images/sold-icon.png';
 import './ListPage.css';
 
@@ -6,9 +7,12 @@ function ListPage({ clothesList, removeClothes }) {
 
   return (
     <div>
+      <BackButton />
     <div className="container">
-      <div className="row">
-        <h2>List Page</h2>
+      <div className="row title">
+        <div className="col">
+          <h2>List Page</h2>
+        </div>
       </div>
       <div className="container">
         {clothesList && clothesList.length > 0 ? 

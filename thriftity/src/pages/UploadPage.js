@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './UploadPage.css'; // Import CSS file
 import Navbar from '../components/Navbar.js';
+import BackButton from '../components/BackButton';
 
 function UploadPage({ addClothes }) {
   const [item, setItem] = useState('');
@@ -45,6 +46,7 @@ function UploadPage({ addClothes }) {
 
   return (
     <div>
+      <BackButton />
       <div className="upload-container">
         <h1>Upload Page</h1>
         <form onSubmit={handleSubmit}>

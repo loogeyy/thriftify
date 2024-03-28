@@ -1,0 +1,19 @@
+.back-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: none;
+}
+
+.back-button-icon {
+    width: 30px;
+    height: 3%;
+}
+
+.text {
+    color: black;
+    position: absolute;
+    top: 1px;
+    left: 45px;
+}
