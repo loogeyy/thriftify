@@ -19,13 +19,17 @@ function App() {
     setClothesList([...clothesList, clothes]);
   };
 
+  const removeClothes = (clothesToRemove) => {
+    setClothesList(clothesList.filter(clothes => clothes !== clothesToRemove));
+  };
+
   return (
     <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/offers" element={<Offers clothesList={clothesList} />} />
           <Route path="/uploadPage" element={<UploadPage addClothes={addClothes}/>} />
-          <Route path="/listPage" element={<ListPage clothesList={clothesList} />} />
+          <Route path="/listPage" element={<ListPage clothesList={clothesList} removeClothes={removeClothes}/>} />
         </Routes>
     </Router>
   );
