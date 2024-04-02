@@ -1,7 +1,16 @@
 /* App.css */
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 10px;
+  font-style: normal;
+}
+
+
 .App {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Jost';
   font-weight: bold;
   background-color: #F5F5F5;
 }

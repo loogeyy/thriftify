@@ -1,18 +1,13 @@
 import Navbar from '../components/Navbar.js';
-import BackButton from '../components/BackButton.js';
 import soldIcon from 'sold-icon.png';
 import './ListPage.css';
 
 function ListPage({ clothesList, removeClothes }) {
 
   return (
-    <div>
-      <BackButton />
-    <div className="container">
-      <div className="row title">
-        <div className="col">
-          <h2>List Page</h2>
-        </div>
+    <div >
+    <div className='title-container'>
+        <h2 className="list-title">List</h2>
       </div>
       <div className="container">
         {clothesList && clothesList.length > 0 ? 
@@ -29,7 +24,7 @@ function ListPage({ clothesList, removeClothes }) {
           : <p>No items uploaded yet.</p>}
       </div>
       
-    </div>
+
     <Navbar />
     </div>
   );
