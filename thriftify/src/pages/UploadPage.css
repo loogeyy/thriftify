@@ -1,10 +1,26 @@
+.list-title {
+  margin-top: 50px;
+  color: #3C0E61;
+  background-color: #f5f5f5;
+}
+
+input {
+  height: 30px;
+  max-width: 70%;
+}
+
 .upload-container {
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 400px;
-  margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: transparent;
+  border: 1px;
+  border-radius: 15px;
+  /* container changes */
+  background-color: rgb(231, 231, 241);
+  margin-right: 40px;
+  /* end here */
+  margin-left: 40px;
+  margin-top: 60px;
 } 
 
 .bg {
@@ -14,6 +30,7 @@
 
 .form-group {
   margin-bottom: 20px;
+  color: #3C0E61;
 }
 
 label {
@@ -31,14 +48,22 @@ input[type="text"] {
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  margin-top: 20px;
+  margin-left: 143px;
+  margin-right: 40px;
+  padding: 3px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgb(231, 231, 241);
+  color: #3C0E61;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  margin-bottom: 80px;
+  width: 80px;
+  height: 30px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #c4b5d7;
 }

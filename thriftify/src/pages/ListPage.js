@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar.js';
-import soldIcon from 'sold-icon.png';
+import soldIcon from '../components/sold-icon.png';
 import './ListPage.css';
 
 function ListPage({ clothesList, removeClothes }) {

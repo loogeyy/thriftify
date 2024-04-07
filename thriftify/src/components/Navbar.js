@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import listIcon from 'list-icon.png';
-import uploadIcon from 'upload-icon.png';
-import offersIcon from 'offers-icon.png'
+import listIcon from './list-icon.png';
+import uploadIcon from './upload-icon.png';
+import offersIcon from './offers-icon.png'
 import './Navbar.css';
 
 const Navbar = () => {

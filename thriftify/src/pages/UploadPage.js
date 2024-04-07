@@ -46,8 +46,9 @@ function UploadPage({ addClothes }) {
   return (
     <div className="bg">
       <div className='title-container'>
-        <h2 className="list-title">Upload</h2>
+        <h2 className="list-title">upload</h2>
       </div>
+      <div className="general-container">
       <div className="upload-container">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -80,10 +81,12 @@ function UploadPage({ addClothes }) {
             <label htmlFor="brand">Brand:</label>
             <input type="text" id="brand" value={brand} onChange={handleBrandChange} required />
           </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+          </form>
+          </div>
+          <button type="submit">submit</button>
+        
       <Navbar />
+      </div>
     </div>
   );
 }

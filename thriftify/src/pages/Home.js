@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
-import logoIcon from 'logo.png';
+import logoIcon from '../components/logo.png';
 
 const Home = () => {
   return (
