@@ -29,16 +29,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[2.0, 10.0]
+              "price-low":2.0,
+              "price-high":10.0
             },
             { "item":"Pants",
-              "price":[2.0, 20.0]
+              "price-low":2.0,
+              "price-high":20.0
             },
             { "item":"Shoes",
-              "price":[5.0, 40.0]
+              "price-low":5.0,
+              "price-high":40.0
             },
             { "item":"Dress",
-              "price":[10.0, 100.0]
+              "price-low":10.0,
+              "price-high":100.0
             }
         ]
     },
@@ -71,16 +75,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[1.0, 20.0]
+              "price-low":1.0,
+              "price-high":20.0
             },
             { "item":"Pants",
-              "price":[5.0, 30.0]
+              "price-low":5.0,
+              "price-high":30.0
             },
             { "item":"Shoes",
-              "price":[10.0, 45.0]
+              "price-low":10.0,
+              "price-high":45.0
             },
             { "item":"Dress",
-              "price":[10.0, 50.0]
+              "price-low":10.0,
+              "price-high":50.0
             }
         ]
     },
@@ -113,16 +121,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[2.0, 7.0]
+              "price-low":2.0,
+              "price-high":7.0
             },
             { "item":"Pants",
-              "price":[2.0, 20.0]
+              "price-low":2.0,
+              "price-high":20.0
             },
             { "item":"Shoes",
-              "price":[2.0, 20.0]
+              "price-low":2.0,
+              "price-high":20.0
             },
             { "item":"Dress",
-              "price":[5.0, 20.0]
+              "price-low":5.0,
+              "price-high":20.0
             }
         ]
     },
@@ -155,16 +167,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[2.0, 10.0]
+              "price-low":2.0,
+              "price-high":10.0
             },
             { "item":"Pants",
-              "price":[7.0, 30.0]
+              "price-low":7.0,
+              "price-high":30.0
             },
             { "item":"Shoes",
-              "price":[7.0, 50.0]
+              "price-low":7.0,
+              "price-high":50.0
             },
             { "item":"Dress",
-              "price":[3.0, 30.0]
+              "price-low":3.0,
+              "price-high":30.0
             }
         ]
     },
@@ -197,16 +213,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[2.5, 10.5]
+              "price-low":2.5,
+              "price-high":10.5
             },
             { "item":"Pants",
-              "price":[2.99, 20.45]
+              "price-low":2.99,
+              "price-high":20.45
             },
             { "item":"Shoes",
-              "price":[5.56, 40.37]
+              "price-low":5.56,
+              "price-high":40.37
             },
             { "item":"Dress",
-              "price":[10.23, 100.99]
+              "price-low":10.23,
+              "price-high":100.99
             }
         ]
     },
@@ -239,16 +259,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[5.0, 6.0]
+              "price-low":5.0,
+              "price-high":6.0
             },
             { "item":"Pants",
-              "price":[1.05, 10.5]
+              "price-low":1.05,
+              "price-high":10.5
             },
             { "item":"Shoes",
-              "price":[2.22, 44.44]
+              "price-low":2.22,
+              "price-high":44.44
             },
             { "item":"Dress",
-              "price":[30.05, 150.05]
+              "price-low":30.05,
+              "price-high":150.05
             }
         ]
     },
@@ -281,16 +305,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[0.5, 10.5]
+              "price-low":0.5,
+              "price-high":10.5
             },
             { "item":"Pants",
-              "price":[1.5, 20.5]
+              "price-low":1.5,
+              "price-high":20.5
             },
             { "item":"Shoes",
-              "price":[5.5, 40.5]
+              "price-low":5.5,
+              "price-high":40.5
             },
             { "item":"Dress",
-              "price":[10.5, 50.5]
+              "price-low":10.5,
+              "price-high":50.5
             }
         ]
     },
@@ -323,16 +351,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[2.0, 10.0]
+              "price-low":2.0,
+              "price-high":10.0
             },
             { "item":"Pants",
-              "price":[2.0, 20.0]
+              "price-low":2.0,
+              "price-high":20.0
             },
             { "item":"Shoes",
-              "price":[5.0, 40.0]
+              "price-low":5.0,
+              "price-high":40.0
             },
             { "item":"Dress",
-              "price":[10.0, 100.0]
+              "price-low":10.0,
+              "price-high":100.0
             }
         ]
     },
@@ -365,16 +397,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[5.0, 20.0]
+              "price-low":5.0,
+              "price-high":20.0
             },
             { "item":"Pants",
-              "price":[5.0, 30.0]
+              "price-low":5.0,
+              "price-high":30.0
             },
             { "item":"Shoes",
-              "price":[15.0, 50.0]
+              "price-low":15.0,
+              "price-high":50.0
             },
             { "item":"Dress",
-              "price":[10.0, 50.0]
+              "price-low":10.0,
+              "price-high":50.0
             }
         ]
     },
@@ -407,16 +443,20 @@ const storesData =
       "offers":
         [
             { "item":"Shirt",
-              "price":[1.0, 10.0]
+              "price-low":1.0,
+              "price-high":10.0
             },
             { "item":"Pants",
-              "price":[1.0, 10.0]
+              "price-low":1.0,
+              "price-high":10.0
             },
             { "item":"Shoes",
-              "price":[1.0, 10.0]
+              "price-low":1.0,
+              "price-high":10.0
             },
             { "item":"Dress",
-              "price":[1.0, 10.0]
+              "price-low":1.0,
+              "price-high":10.0
             }
         ]
     }
