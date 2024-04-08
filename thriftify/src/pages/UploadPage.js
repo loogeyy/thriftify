@@ -8,9 +8,11 @@ function UploadPage({ addClothes }) {
   const [size, setSize] = useState('');
   const [color, setColor] = useState('');
   const [brand, setBrand] = useState('');
+  const [condition, setCondition] = useState('');
 
   const categories = ['Shirt', 'Pants', 'Shoes', 'Dress']; // Example categories
   const sizes = ['XS', 'S', 'M', 'L', 'XL']; // Example sizes
+  const conditions = ['Poor', 'Average', 'Excellent']; // Example conditions
 
   const handleItemChange = (event) => {
     setItem(event.target.value);
@@ -32,15 +34,20 @@ function UploadPage({ addClothes }) {
     setBrand(event.target.value);
   };
 
+  const handleConditionChange = (event) => {
+    setCondition(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const clothes = { item, category, size, color, brand };
+    const clothes = { item, category, size, color, brand, condition };
     addClothes(clothes);
     setItem('');
     setCategory('');
     setSize('');
     setColor('');
     setBrand('');
+    setCondition('');
   };
 
   return (
@@ -80,6 +87,15 @@ function UploadPage({ addClothes }) {
           <div className="form-group">
             <label htmlFor="brand">Brand:</label>
             <input type="text" id="brand" value={brand} onChange={handleBrandChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="condition">Condition:</label>
+            <select id="condition" value={condition} onChange={handleConditionChange} required>
+              <option value="">Select condition</option>
+              {conditions.map((cd, index) => (
+                <option key={index} value={cd}>{cd}</option>
+              ))}
+            </select>
           </div>
           </form>
           </div>
