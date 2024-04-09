@@ -50,7 +50,7 @@ const Offers = ({ clothesList }) => {
       }
     });
     if (matchingStores.length === 0) {
-      return [{ name: 'No stores offer', priceLow: 0, priceHigh: 0 }];
+      return [{ name: '', priceLow: -1, priceHigh: -1 }];
     }
 
     console.log(matchingStores);
@@ -60,7 +60,7 @@ const Offers = ({ clothesList }) => {
   return (
     <div>
       <div className='title-container'>
-        <h2 className="offers-title">Offers</h2>
+        <h2 className="offers-title">offers</h2>
       </div>
       <div className="container offers-container">
 
@@ -119,9 +119,10 @@ const Offers = ({ clothesList }) => {
               console.log(store)
               return (
               <div key={index} className="store-item">
+                {store.name != '' ? 
                 <div className="row">
                   <div className="col-3">
-                    <p className="store-price">${store.priceLow} - ${store.priceHigh}</p>
+                     <p className="store-price">${store.priceLow} - ${store.priceHigh}</p>
                   </div>
                   <div className="col-9">
                     <div className="row">
@@ -134,6 +135,7 @@ const Offers = ({ clothesList }) => {
                     </div>
                   </div>
                 </div>
+                :  <p className="store-name">No Offers from Nearby Stores</p>}
             </div>)
             })}
           </div>

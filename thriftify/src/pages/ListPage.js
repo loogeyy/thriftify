@@ -4,9 +4,10 @@ import './ListPage.css';
 
 function ListPage({ clothesList, removeClothes }) {
   return (
+<div className="general">
     <div>
       <div className='title-container'>
-        <h2 className="offers-title">List</h2>
+        <h2 className="offers-title">list</h2>
       </div>
       <div className="container">
         {clothesList && clothesList.length > 0 ? 
@@ -49,9 +50,12 @@ function ListPage({ clothesList, removeClothes }) {
               </div>
             </div>
           ))
-          : <p>No items uploaded yet.</p>}
+          : <div className="none">
+            <p>No items uploaded yet.</p>
+            </div>}
       </div>
       <Navbar />
+    </div>
     </div>
   );
 };

@@ -53,7 +53,7 @@ function UploadPage({ addClothes }) {
   return (
     <div className="bg">
       <div className='title-container'>
-        <h2 className="list-title">Upload</h2>
+        <h2 className="list-title">upload</h2>
       </div>
       <div className="bg">
         <div className="upload-container">
@@ -64,7 +64,7 @@ function UploadPage({ addClothes }) {
             </div>
             <div className="form-group">
               <label htmlFor="category">Category:</label>
-              <select id="category" value={category} onChange={handleCategoryChange} required>
+              <select id="dropdown" value={category} onChange={handleCategoryChange} required>
                 <option value="">Select category</option>
                 {categories.map((cat, index) => (
                   <option key={index} value={cat}>{cat}</option>
