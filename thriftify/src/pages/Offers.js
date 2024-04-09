@@ -38,16 +38,24 @@ const Offers = ({ clothesList }) => {
           {clothesList && clothesList.length > 0 ? (
             <div>
               <h1>{clothesList[currentCardIndex].title}</h1>
-              <button className="card-btn prev" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>{'<'}</button>
-              <div className="card">
-                <p>{clothesList[currentCardIndex].description}</p>
-                <p>Item: {clothesList[currentCardIndex].item}</p>
-                <p>Category: {clothesList[currentCardIndex].category}</p>
-                <p>Color: {clothesList[currentCardIndex].color}</p>
-                <p>Size: {clothesList[currentCardIndex].size}</p>
-                <p>Brand: {clothesList[currentCardIndex].brand}</p>
+              <div className='row'>
+                <div className='col'>
+                  <button className="card-btn prev" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>{'<'}</button>
+                </div>
+                <div className='col'>
+                  <div className="card">
+                    <p>{clothesList[currentCardIndex].description}</p>
+                    <p>Item: {clothesList[currentCardIndex].item}</p>
+                    <p>Category: {clothesList[currentCardIndex].category}</p>
+                    <p>Color: {clothesList[currentCardIndex].color}</p>
+                    <p>Size: {clothesList[currentCardIndex].size}</p>
+                    <p>Brand: {clothesList[currentCardIndex].brand}</p>
+                  </div>
+                </div>
+                <div className='col'>
+                  <button className="card-btn next" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>{'>'}</button>
+                </div>
               </div>
-              <button className="card-btn next" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>{'>'}</button>
             </div>
           ) : (
             <div className="blank-card">
