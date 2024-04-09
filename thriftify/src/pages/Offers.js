@@ -100,7 +100,7 @@ const Offers = ({ clothesList }) => {
 
         <div className='row'>
           <div className="col matches-header">Matches for this Item:</div>
-          <div class="col">
+          {/* <div class="col">
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic" >
                 Sort by
@@ -111,7 +111,7 @@ const Offers = ({ clothesList }) => {
                 <Dropdown.Item href="#/action-2">Price</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-          </div>
+          </div> */}
         </div>
         <div className="row store-list-container">
           <div className="col store-list">
