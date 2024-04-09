@@ -55,7 +55,7 @@ function UploadPage({ addClothes }) {
       <div className='title-container'>
         <h2 className="list-title">Upload</h2>
       </div>
-      <div className="general-container">
+      <div className="bg">
         <div className="upload-container">
           <form onSubmit={handleSubmit}>
             <div className="form-group">

@@ -71,7 +71,9 @@ const Offers = ({ clothesList }) => {
             <div className='col'>
               <div className="card">
                 <p>{clothesList[currentCardIndex].description}</p>
-                <p><strong> {clothesList[currentCardIndex].item} </strong></p>
+                <div className="item">
+                  <p><strong> {clothesList[currentCardIndex].item} </strong></p>
+                </div>
                 <p><strong>Category:</strong> {clothesList[currentCardIndex].category}</p>
                 <p><strong>Color:</strong> {clothesList[currentCardIndex].color}</p>
                 <p><strong>Size:</strong> {clothesList[currentCardIndex].size}</p>
