@@ -19,8 +19,11 @@ input {
   background-color: rgb(231, 231, 241);
   margin-right: 40px;
   /* end here */
-  margin-left: 40px;
+  margin-left: 450px;
+  /* margin-top: 60px; */
+  margin: auto;
   margin-top: 60px;
+  height: 550px;
 } 
 
 .bg {

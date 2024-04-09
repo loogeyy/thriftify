@@ -56,52 +56,51 @@ function UploadPage({ addClothes }) {
         <h2 className="list-title">upload</h2>
       </div>
       <div className="general-container">
-      <div className="upload-container">
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="item">Item:</label>
-            <input type="text" id="type" value={item} onChange={handleItemChange} required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="category">Category:</label>
-            <select id="category" value={category} onChange={handleCategoryChange} required>
-              <option value="">Select category</option>
-              {categories.map((cat, index) => (
-                <option key={index} value={cat}>{cat}</option>
-              ))}
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="size">Size:</label>
-            <select id="size" value={size} onChange={handleSizeChange} required>
-              <option value="">Select size</option>
-              {sizes.map((sz, index) => (
-                <option key={index} value={sz}>{sz}</option>
-              ))}
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="color">Color:</label>
-            <input type="text" id="color" value={color} onChange={handleColorChange} required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="brand">Brand:</label>
-            <input type="text" id="brand" value={brand} onChange={handleBrandChange} required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="condition">Condition:</label>
-            <select id="condition" value={condition} onChange={handleConditionChange} required>
-              <option value="">Select condition</option>
-              {conditions.map((cd, index) => (
-                <option key={index} value={cd}>{cd}</option>
-              ))}
-            </select>
-          </div>
+        <div className="upload-container">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="item">Item:</label>
+              <input type="text" id="type" value={item} onChange={handleItemChange} required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="category">Category:</label>
+              <select id="category" value={category} onChange={handleCategoryChange} required>
+                <option value="">Select category</option>
+                {categories.map((cat, index) => (
+                  <option key={index} value={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="size">Size:</label>
+              <select id="size" value={size} onChange={handleSizeChange} required>
+                <option value="">Select size</option>
+                {sizes.map((sz, index) => (
+                  <option key={index} value={sz}>{sz}</option>
+                ))}
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="color">Color:</label>
+              <input type="text" id="color" value={color} onChange={handleColorChange} required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="brand">Brand:</label>
+              <input type="text" id="brand" value={brand} onChange={handleBrandChange} required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="condition">Condition:</label>
+              <select id="condition" value={condition} onChange={handleConditionChange} required>
+                <option value="">Select condition</option>
+                {conditions.map((cd, index) => (
+                  <option key={index} value={cd}>{cd}</option>
+                ))}
+              </select>
+            </div>
+            <button type="submit">submit</button>
           </form>
-          </div>
-          <button type="submit">submit</button>
-        
-      <Navbar />
+        </div>
+        <Navbar />
       </div>
     </div>
   );
