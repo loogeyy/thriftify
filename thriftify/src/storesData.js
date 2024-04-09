@@ -10,7 +10,7 @@ const storesData =
             { "value":"Old Navy",
               "scale":0.9
             },
-            { "value":"Zara",
+            { "value":"Brandy Melville",
               "scale":1.5
             }
         ],
@@ -99,10 +99,10 @@ const storesData =
             { "value":"",
               "scale":1.0
             },
-            { "value":"Old Navy",
+            { "value":"Levi's",
               "scale":0.8
             },
-            { "value":"Zara",
+            { "value":"Nike",
               "scale":1.4
             }
         ],
@@ -237,10 +237,10 @@ const storesData =
             { "value":"",
               "scale":1.0
             },
-            { "value":"Old Navy",
-              "scale":0.5
+            { "value":"Nike",
+              "scale":1.1
             },
-            { "value":"Zara",
+            { "value":"Chanel",
               "scale":2.0
             }
         ],
@@ -283,10 +283,10 @@ const storesData =
             { "value":"",
               "scale":1.0
             },
-            { "value":"Old Navy",
+            { "value":"Converse",
               "scale":0.99
             },
-            { "value":"Zara",
+            { "value":"Puma",
               "scale":1.01
             }
         ],
@@ -329,10 +329,10 @@ const storesData =
             { "value":"",
               "scale":1.0
             },
-            { "value":"Old Navy",
+            { "value":"Levi's",
               "scale":0.9
             },
-            { "value":"Zara",
+            { "value":"Converse",
               "scale":1.5
             }
         ],

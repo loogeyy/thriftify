@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Dropdown } from 'react-bootstrap'
 import './Offers.css';
 import storesData from '../storesData';
 
@@ -29,6 +30,10 @@ const Offers = ({ clothesList }) => {
   };
 
   const calculatePriceRange = (itemIndex) => {
+    if(clothesList.length === 0) {
+      return [];
+    }
+
     const currentItem = clothesList[itemIndex];
     const matchingStores = [];
     storesData.forEach((store) => {
@@ -47,6 +52,8 @@ const Offers = ({ clothesList }) => {
     if (matchingStores.length === 0) {
       return [{ name: 'No stores offer', priceLow: 0, priceHigh: 0 }];
     }
+
+    console.log(matchingStores);
     return matchingStores;
   };
 
@@ -56,53 +63,59 @@ const Offers = ({ clothesList }) => {
         <h2 className="offers-title">Offers</h2>
       </div>
       <div className="container offers-container">
-        <div className="centered-box">
 
-          {clothesList && clothesList.length > 0 ? (
-            <div>
-              <h1>{clothesList[currentCardIndex].title}</h1>
-              <div className='row'>
-                <div className='col'>
-                  <button className="card-btn prev" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>{'<'}</button>
-                </div>
-                <div className='col'>
-                  <div className="card">
-                    <p>{clothesList[currentCardIndex].description}</p>
-                    <p>Item: {clothesList[currentCardIndex].item}</p>
-                    <p>Category: {clothesList[currentCardIndex].category}</p>
-                    <p>Color: {clothesList[currentCardIndex].color}</p>
-                    <p>Size: {clothesList[currentCardIndex].size}</p>
-                    <p>Brand: {clothesList[currentCardIndex].brand}</p>
-                  </div>
-                </div>
-                <div className='col'>
-                  <button className="card-btn next" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>{'>'}</button>
-                </div>
+      {clothesList && clothesList.length > 0 ? (
+        <>
+          <h1>{clothesList[currentCardIndex].title}</h1>
+          <div className='row'>
+            <div className='col'>
+              <div className="card">
+                <p>{clothesList[currentCardIndex].description}</p>
+                <p><strong> {clothesList[currentCardIndex].item} </strong></p>
+                <p><strong>Category:</strong> {clothesList[currentCardIndex].category}</p>
+                <p><strong>Color:</strong> {clothesList[currentCardIndex].color}</p>
+                <p><strong>Size:</strong> {clothesList[currentCardIndex].size}</p>
+                <p><strong>Brand:</strong> {clothesList[currentCardIndex].brand}</p>
+                <p><strong>Condition:</strong> {clothesList[currentCardIndex].condition}</p>
               </div>
             </div>
-          ) : (
-            <div className="blank-card">
-              <p>No items added, please go to the upload screen to add an item.</p>
+            
+          </div>
+          <div className='row'>
+            <div className='col btn-col'>
+              <button className="card-btn prev" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>{'<'}</button>
             </div>
-          )}
-
+            <div className='col btn-col'>
+              <button className="card-btn next" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>{'>'}</button>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="blank-card">
+          <p>No items added, please go to the upload screen to add an item.</p>
         </div>
-        <div className='row'>   
-        <div className="col matches-header">Matches for this Item:</div>
-        <div class="col dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sort By
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Ascending Distance</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+      )}
+
+        <div className='row'>
+          <div className="col matches-header">Matches for this Item:</div>
+          <div class="col">
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic" >
+                Sort by
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Distance</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Price</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
         </div>
-        </div>
-        <div className="store-list-container">
-          <div className="store-list">
-            {calculatePriceRange(currentCardIndex).map((store, index) => (
+        <div className="row store-list-container">
+          <div className="col store-list">
+            {calculatePriceRange(currentCardIndex).map((store, index) => {
+              console.log(store)
+              return (
               <div key={index} className="store-item">
                 <div className="row">
                   <div className="col-3">
@@ -119,8 +132,8 @@ const Offers = ({ clothesList }) => {
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+            </div>)
+            })}
           </div>
         </div>
         <Navbar />
@@ -131,3 +144,22 @@ const Offers = ({ clothesList }) => {
 
 export default Offers;
 
+/*
+<div key={index} className="store-item">
+                <div className="row">
+                  <div className="col-3">
+                    <p className="store-price">${store.priceLow} - ${store.priceHigh}</p>
+                  </div>
+                  <div className="col-9">
+                    <div className="row">
+                      <div className="col-12">
+                        <p className="store-name">{store.name}</p>
+                      </div>
+                      <div className="col-12">
+                        <p className="store-distance">{storesData[index].distance} miles</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+*/

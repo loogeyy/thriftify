@@ -53,7 +53,7 @@ function UploadPage({ addClothes }) {
   return (
     <div className="bg">
       <div className='title-container'>
-        <h2 className="list-title">upload</h2>
+        <h2 className="list-title">Upload</h2>
       </div>
       <div className="general-container">
         <div className="upload-container">
@@ -97,7 +97,7 @@ function UploadPage({ addClothes }) {
                 ))}
               </select>
             </div>
-            <button type="submit">submit</button>
+            <button className="upload-button" type="submit">submit</button>
           </form>
         </div>
         <Navbar />

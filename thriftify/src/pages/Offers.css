@@ -45,10 +45,11 @@
 .card {
   background-color: rgb(231, 231, 241);
   border: 1px solid #ccc;
-  padding: 20px;
-  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* padding: 20px;
   height: 300px;
-  width: 300px;
+  width: 300px; */
   color: #3C0E61;
 }
 
@@ -57,6 +58,10 @@
   outline: none;
   box-shadow: none;
   background-color: #f5f5f5;
+}
+
+.btn-col {
+  text-align: center;
 }
 
 .card-btn {
@@ -81,14 +86,16 @@
 .store-list-container {
   height: 300px;
   width: 375px;
-  max-height: 500px;
   overflow-y: auto;
   margin-bottom: 40px;
   align-items: center;
+  margin-top: 20px;
+  max-height: 500px;
 }
 
 .store-list {
   padding-right: 15px;
+  height: 100%;
 }
 
 .matches-header {
@@ -116,7 +123,7 @@
   padding-top: 20px;
   padding-right: 15px;
   margin-left: 10px;
-  font-size: 30px;
+  font-size: 20px;
 
 }
 
@@ -137,4 +144,29 @@
 
 .store-list {
   padding-right: 15px;
+}
+
+.dropdown .dropdown-toggle {
+  background-color: #3C0E61;
+  border: none;
+}
+
+.dropdown .dropdown-toggle:hover {
+  background-color: #3C0E61;
+  border: none;
+}
+
+.dropdown .dropdown-menu {
+  background-color: rgb(231, 231, 241);
+  border: none;
+}
+
+.dropdown .dropdown-item {
+  background-color: rgb(231, 231, 241);
+  border: none;
+}
+
+.dropdown .dropdown-item:hover {
+  background-color: #3C0E61;
+  border: none;
 }
