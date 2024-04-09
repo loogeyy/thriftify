@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Offers.css';
+import storesData from '../storesData';
 
 const Offers = ({ clothesList }) => {
-  const storeData = [
-    { name: 'Store A', price: '$10', distance: '5 miles' },
-    { name: 'Store B', price: '$15', distance: '8 miles' },
-    { name: 'Store C', price: '$12', distance: '3 miles' },
-    { name: 'Store D', price: '$20', distance: '10 miles' },
-    { name: 'Store E', price: '$18', distance: '6 miles' },
-    { name: 'Store F', price: '$25', distance: '12 miles' },
-  ];
+  // const storeData = [
+  //   { name: 'Store A', price: '$10', distance: '5 miles' },
+  //   { name: 'Store B', price: '$15', distance: '8 miles' },
+  //   { name: 'Store C', price: '$12', distance: '3 miles' },
+  //   { name: 'Store D', price: '$20', distance: '10 miles' },
+  //   { name: 'Store E', price: '$18', distance: '6 miles' },
+  //   { name: 'Store F', price: '$25', distance: '12 miles' },
+  // ];
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
@@ -25,6 +26,28 @@ const Offers = ({ clothesList }) => {
     if (clothesList && clothesList.length > 1) {
       setCurrentCardIndex((prevIndex) => (prevIndex + 1) % clothesList.length);
     }
+  };
+
+  const calculatePriceRange = (itemIndex) => {
+    const currentItem = clothesList[itemIndex];
+    const matchingStores = [];
+    storesData.forEach((store) => {
+      console.log(`Checking store: ${store.name}`);
+      const matchingBrand = store.brands.some((brand) => brand.value === currentItem.brand);
+      if (matchingBrand) {
+        const itemOffer = store.offers.find((offer) => offer.item === currentItem.category);
+        const priceLow = itemOffer['price-low']
+        const priceHigh = itemOffer['price-high']
+        console.log(`Found matching offer at ${store.name}. Price range: ${priceLow} - ${priceHigh}`);
+        if (!isNaN(priceLow) && !isNaN(priceHigh)) {
+          matchingStores.push({ name: store.name, priceLow, priceHigh });
+        }
+      }
+    });
+    if (matchingStores.length === 0) {
+      return [{ name: 'No stores offer', priceLow: 0, priceHigh: 0 }];
+    }
+    return matchingStores;
   };
 
   return (
@@ -79,11 +102,11 @@ const Offers = ({ clothesList }) => {
         </div>
         <div className="store-list-container">
           <div className="store-list">
-            {storeData.map((store, index) => (
+            {calculatePriceRange(currentCardIndex).map((store, index) => (
               <div key={index} className="store-item">
                 <div className="row">
                   <div className="col-3">
-                    <p className="store-price">{store.price}</p>
+                    <p className="store-price">${store.priceLow} - ${store.priceHigh}</p>
                   </div>
                   <div className="col-9">
                     <div className="row">
@@ -91,7 +114,7 @@ const Offers = ({ clothesList }) => {
                         <p className="store-name">{store.name}</p>
                       </div>
                       <div className="col-12">
-                        <p className="store-distance">{store.distance}</p>
+                        <p className="store-distance">{storesData[index].distance} miles</p>
                       </div>
                     </div>
                   </div>
