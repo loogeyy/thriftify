@@ -4,16 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dropdown } from 'react-bootstrap'
 import './Offers.css';
 import storesData from '../storesData';
+import ItemCard from './ItemCard';
+// import rightArrowImage from '../../public/right-arrow.png';
+
 
 const Offers = ({ clothesList }) => {
-  // const storeData = [
-  //   { name: 'Store A', price: '$10', distance: '5 miles' },
-  //   { name: 'Store B', price: '$15', distance: '8 miles' },
-  //   { name: 'Store C', price: '$12', distance: '3 miles' },
-  //   { name: 'Store D', price: '$20', distance: '10 miles' },
-  //   { name: 'Store E', price: '$18', distance: '6 miles' },
-  //   { name: 'Store F', price: '$25', distance: '12 miles' },
-  // ];
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
@@ -66,32 +61,16 @@ const Offers = ({ clothesList }) => {
 
       {clothesList && clothesList.length > 0 ? (
         <>
-          <h1>{clothesList[currentCardIndex].title}</h1>
-          <div className='row'>
-            <div className='col'>
-              <div className="card">
-                <p>{clothesList[currentCardIndex].description}</p>
-                <div className="item">
-                  <p><strong> {clothesList[currentCardIndex].item} </strong></p>
+        <ItemCard clothesList={clothesList} currentCardIndex={currentCardIndex}></ItemCard>
+        <div className='row'>
+                <div className='col btn-col'>
+                    <button className="card-btn prev" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>{'<'}</button>
                 </div>
-                <p><strong>Category:</strong> {clothesList[currentCardIndex].category}</p>
-                <p><strong>Color:</strong> {clothesList[currentCardIndex].color}</p>
-                <p><strong>Size:</strong> {clothesList[currentCardIndex].size}</p>
-                <p><strong>Brand:</strong> {clothesList[currentCardIndex].brand}</p>
-                <p><strong>Condition:</strong> {clothesList[currentCardIndex].condition}</p>
-              </div>
+                <div className='col btn-col'>
+                    <button className="card-btn next" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>{'>'}</button>
+                </div>
             </div>
-            
-          </div>
-          <div className='row'>
-            <div className='col btn-col'>
-              <button className="card-btn prev" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>{'<'}</button>
-            </div>
-            <div className='col btn-col'>
-              <button className="card-btn next" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>{'>'}</button>
-            </div>
-          </div>
-        </>
+      </>
       ) : (
         <div className="blank-card">
           <p>No items added, please go to the upload screen to add an item.</p>
