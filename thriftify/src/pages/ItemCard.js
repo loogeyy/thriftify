@@ -5,8 +5,6 @@ function ItemCard({ clothesList, currentCardIndex }) {
     return (
         <>
             <h1>{clothesList[currentCardIndex].title}</h1>
-            <div className='row'>
-                <div className='col'>
                     <div className="card">
                         <p>{clothesList[currentCardIndex].description}</p>
                         <div className="item">
@@ -18,9 +16,6 @@ function ItemCard({ clothesList, currentCardIndex }) {
                         <p><strong>Brand:</strong> {clothesList[currentCardIndex].brand}</p>
                         <p><strong>Condition:</strong> {clothesList[currentCardIndex].condition}</p>
                     </div>
-                </div>
-
-            </div>
         </>
     )
 }
