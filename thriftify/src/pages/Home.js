@@ -19,7 +19,7 @@ const Home = () => {
           </Row>
           <Row className="justify-content-center align-items-center">
             <Col xs={12} sm={6} className="text-center">
-              <Link to="/UploadPage" className="btn btn-block upload-listing">
+              <Link to="/upload" className="btn btn-block upload-listing">
                 upload listing
               </Link>
             </Col>

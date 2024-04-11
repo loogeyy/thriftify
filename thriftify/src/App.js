@@ -14,6 +14,12 @@ import React, { useState } from 'react';
 
 function App() {
   const [clothesList, setClothesList] = useState([]);
+  const [index, setIndex] = useState(0);
+
+  const changeIndex = (i) => {
+    console.log("changing index to...", i)
+    setIndex(i);
+  }
 
   const addClothes = (clothes) => {
     setClothesList([...clothesList, clothes]);
@@ -27,9 +33,9 @@ function App() {
     <Router>
         <Routes>
           <Route path="/thriftify" element={<Home />} />
-          <Route path="/offers" element={<Offers clothesList={clothesList} />} />
-          <Route path="/uploadPage" element={<UploadPage addClothes={addClothes}/>} />
-          <Route path="/listPage" element={<ListPage clothesList={clothesList} removeClothes={removeClothes}/>} />
+          <Route path="/offers" element={<Offers clothesList={clothesList} index={index} changeIndex={changeIndex}/>} />
+          <Route path="/upload" element={<UploadPage addClothes={addClothes}/>} />
+          <Route path="/list" element={<ListPage clothesList={clothesList} removeClothes={removeClothes} index={index} changeIndex={changeIndex}/>} />
         </Routes>
     </Router>
   );

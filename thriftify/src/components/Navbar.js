@@ -8,13 +8,13 @@ const Navbar = () => {
   return (
     <nav class='nav-bar'>
       <div class='nav-bar-tabs'>
-        <Link to="/ListPage" style={{ textDecoration: 'none' }}>
+        <Link to="/list" style={{ textDecoration: 'none' }}>
           <img class="nav-bar-list-icon" src={listIcon} alt="List Icon" />
         </Link>
-        <Link to="/UploadPage">
+        <Link to="/upload">
           <img class="nav-bar-upload-icon" src={uploadIcon} alt="Upload Icon"/>
         </Link>
-        <Link to="/Offers" style={{ textDecoration: 'none' }}>
+        <Link to="/offers" style={{ textDecoration: 'none' }}>
           <img class="nav-bar-offers-icon" src={offersIcon} alt="Offers Icon" />
         </Link>
 

@@ -8,7 +8,7 @@ function ItemCard({ clothesList, currentCardIndex }) {
                     <div className="card">
                         <p>{clothesList[currentCardIndex].description}</p>
                         <div className="item">
-                            <p><strong> {clothesList[currentCardIndex].item} </strong></p>
+                            <p className='item-name'><strong> {clothesList[currentCardIndex].item} </strong></p>
                         </div>
                         <p><strong>Category:</strong> {clothesList[currentCardIndex].category}</p>
                         <p><strong>Color:</strong> {clothesList[currentCardIndex].color}</p>

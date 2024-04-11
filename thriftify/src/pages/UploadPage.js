@@ -64,7 +64,7 @@ function UploadPage({ addClothes }) {
             </div>
             <div className="form-group">
               <label htmlFor="category">Category:</label>
-              <select id="dropdown" value={category} onChange={handleCategoryChange} required>
+              <select className="dropdown" value={category} onChange={handleCategoryChange} required>
                 <option value="">Select category</option>
                 {categories.map((cat, index) => (
                   <option key={index} value={cat}>{cat}</option>
@@ -73,7 +73,7 @@ function UploadPage({ addClothes }) {
             </div>
             <div className="form-group">
               <label htmlFor="size">Size:</label>
-              <select id="size" value={size} onChange={handleSizeChange} required>
+              <select className="dropdown" value={size} onChange={handleSizeChange} required>
                 <option value="">Select size</option>
                 {sizes.map((sz, index) => (
                   <option key={index} value={sz}>{sz}</option>
@@ -90,7 +90,7 @@ function UploadPage({ addClothes }) {
             </div>
             <div className="form-group">
               <label htmlFor="condition">Condition:</label>
-              <select id="condition" value={condition} onChange={handleConditionChange} required>
+              <select className="dropdown" value={condition} onChange={handleConditionChange} required>
                 <option value="">Select condition</option>
                 {conditions.map((cd, index) => (
                   <option key={index} value={cd}>{cd}</option>

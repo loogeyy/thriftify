@@ -17,14 +17,16 @@
 }
 
 .item-container {
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  background-color: rgb(231, 231, 241);
+  border: none;
   border-radius: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
   justify-content: space-between;
   align-items: center;
+  font-family:"Jost";
+  color:#3C0E61;
 }
 
 .item-container .row.item {
