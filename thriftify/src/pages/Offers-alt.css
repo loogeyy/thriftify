@@ -1,0 +1,274 @@
+.title-container {
+    width: 100%;
+    height: 70px;
+    font-family: "Jost";
+    /* text-align: center; */
+    background-color:  rgb(231, 231, 241);
+  }
+  
+  .row {
+    width: 100%;
+  }
+  
+  .no-offers {
+    margin-top: 5px;
+  }
+  
+  .offers-container {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #3C0E61;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .offers-title {
+    font-size: 35px;
+    padding-top: 30px;
+    color: #3C0E61;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    padding-bottom: 60px;
+  }
+  
+  .centered-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    /* margin-top: 50px; */
+  }
+  
+  .button:focus,
+  .button:active {
+    outline: none;
+    box-shadow: none;
+    background-color: #f5f5f5;
+  }
+  
+  
+  .card-btn {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    background: transparent;
+    border: none;
+  }
+  
+  .prev {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .next {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .matches-header {
+    /* margin-top: 10px; */
+    font-family: "Jost";
+    text-align: center !important;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .store-list-container {
+    display: flex;
+    /* max-height: 100px; */
+    width: 325px;
+    overflow-y: auto;
+    margin-bottom: 40px;
+    align-items: center;
+    margin-top: 20px;
+    max-height: 300px;
+  }
+  
+  .store-list {
+    padding-right: 15px;
+    height: 80%;
+  }
+  
+  
+  .store-item {
+    background-color: rgb(231, 231, 241);
+    margin-bottom: 15px;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    font-family: "Jost";
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .store-price {
+    padding-top: 25px;
+    padding-right: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  
+  .store-distance {
+    font-size: 16px;
+    text-align: right;
+    padding-right: 10px;
+  
+  }
+  
+  .store-name {
+    margin-top: 10px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  
+  .no-store {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  
+  .store-list {
+    padding-right: 15px;
+  }
+  
+  .dropdown .dropdown-toggle {
+    margin-top: 50px;
+    margin-left: 18px;
+    background-color: #3C0E61;
+    border: none;
+  }
+  
+  .dropdown .dropdown-toggle:hover {
+    background-color: #3C0E61;
+    border: none;
+  }
+  
+  .dropdown .dropdown-menu {
+    background-color: rgb(231, 231, 241);
+    border: none;
+  }
+  
+  .dropdown .dropdown-item {
+    background-color: rgb(231, 231, 241);
+    border: none;
+  }
+  
+  .dropdown .dropdown-item:hover {
+    background-color: #3C0E61;
+    border: none;
+  }
+  
+  .card {
+    background-color: rgb(231, 231, 241);
+    font-family:"Jost";
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    min-width: 250px;
+    color: #3C0E61;
+  }
+  
+  .item {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .arrow {
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+  }
+  
+  .arrows {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .no-offers {
+    font-size: 17px;
+    padding: 10px;
+    color: #3C0E61;
+    font-family: Jost;
+    /* font-weight: bold; */
+  }
+  
+  .no-items-container {
+    background-color: rgb(231, 231, 241);
+    border-radius: 15px;
+    width: 85%;
+    margin-top: 100px;
+  
+  }
+  
+  .upload-btn {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    background:  rgb(231, 231, 241);
+    border-radius: 15px;
+    width: 50%;
+    border: none;
+  }
+  
+  .upload {
+    width: 50px;
+  }
+  
+  .item-count-display {
+    padding-top: 10px;
+    font-family: "Jost";
+  }
+  
+  .no-match {
+    background:  rgb(231, 231, 241);
+    /* height: 100px; */
+    border-radius: 8px;
+    padding: 50px 50px;
+    font-family:"Jost";
+  }
+  
+  .dropdown-container {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  
+  .sort {
+    width: 150px;
+    background-color: #c3b5d6;
+    border-radius: 8px;
+    color: #3C0E61;
+    border: none;
+    font-family: "Jost";
+  }
+  
+  .item-name {
+    font-size: 20px;
+    font-family: "Jost";
+  }
+  
+  .alternate {
+    margin-left: 10px;
+    padding: 20px 40px;
+  }
+  
+  .store-name-alt {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+  }

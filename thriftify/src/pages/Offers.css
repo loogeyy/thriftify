@@ -29,11 +29,11 @@
 
 .offers-title {
   font-size: 35px;
-  padding-top: 30px;
+  margin-top: 30px;
   color: #3C0E61;
   font-weight: bold;
   background-color: #f5f5f5;
-  padding-bottom: 60px;
+  height: 200px;
 }
 
 .centered-box {
@@ -261,14 +261,4 @@
   font-family: "Jost";
 }
 
-.alternate {
-  margin-left: 10px;
-  padding: 20px 40px;
-}
 
-.store-name-alt {
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-}
