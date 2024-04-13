@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Offers.css';
@@ -13,6 +13,45 @@ import uploadIcon from '../components/upload-icon.png';
 import sadIcon from '../components/sad-face.png';
 
 const Offers = ({ clothesList, index, changeIndex }) => {
+
+  const [startX, setStartX] = useState(null);
+  const containerRef = useRef(null);
+
+  const handleTouchStart = (event) => {
+    setStartX(event.touches[0].clientX);
+  };
+
+  const handleTouchMove = (event) => {
+    event.preventDefault();
+  };
+
+  const handleTouchEnd = (event) => {
+    if (startX === null) return;
+
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+    const threshold = 50;
+
+    if (deltaX > threshold) {
+      handleSwipeRight();
+    } else if (deltaX < -threshold) {
+      handleSwipeLeft();
+    }
+
+    setStartX(null);
+  };
+
+  const handleSwipeLeft = () => {
+    if (clothesList && clothesList.length > 1) {
+      changeIndex((index + 1) % clothesList.length);
+    }
+  };
+
+  const handleSwipeRight = () => {
+    if (clothesList && clothesList.length > 1) {
+      changeIndex((index - 1 + clothesList.length) % clothesList.length);
+    }
+  };
 
   const [sort, setSort] = useState('');
   const handleSortChange = (event) => {
@@ -94,7 +133,10 @@ const Offers = ({ clothesList, index, changeIndex }) => {
       <div className="container offers-container">
         {clothesList && clothesList.length > 0 ? (
           <>
-            <div className='row justify-content-center align-items-center'>
+            <div className='row justify-content-center align-items-center'  ref={containerRef}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}>
               <div className='col-auto text-center arrows'>
                 <button className="card-btn" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>
                   <img className='arrow' src={!clothesList || clothesList.length < 2 ? leftArrowLight : leftArrow} alt="left arrow" />
