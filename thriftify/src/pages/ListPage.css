@@ -62,15 +62,9 @@
   height: 40px;
 } */
 
-.item-container .row .col-4 .sold-btn {
-  outline: none;
-  width: 55px;
-  height: 55px;
-}
-
-.item-container .row .col-4 .sold-btn-img {
-  width: 40px;
-  height: 40px;
+.sold-btn-img {
+  max-width: 30px;
+  max-height: 30px;
   /* margin-top: -50px; */
 }
 
@@ -83,8 +77,8 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  width: 80px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 .sold-button:hover {

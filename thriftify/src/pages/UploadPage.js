@@ -9,6 +9,7 @@ function UploadPage({ addClothes }) {
   const [color, setColor] = useState('');
   const [brand, setBrand] = useState('');
   const [condition, setCondition] = useState('');
+  const [uploadSuccess, setUploadSuccess] = useState(false); // State for controlling the visibility of the popup
 
   const categories = ['Shirt', 'Pants', 'Shoes', 'Dress', 'Shorts', 'Skirt', 'Outerwear']; // Example categories
   const sizes = ['XS', 'S', 'M', 'L', 'XL']; // Example sizes
@@ -48,6 +49,11 @@ function UploadPage({ addClothes }) {
     setColor('');
     setBrand('');
     setCondition('');
+    setUploadSuccess(true); // Set upload success to true when the form is submitted
+    // Reset upload success after some time (e.g., 3 seconds)
+    setTimeout(() => {
+      setUploadSuccess(false);
+    }, 3000);
   };
 
   return (
@@ -98,6 +104,7 @@ function UploadPage({ addClothes }) {
               </select>
             </div>
             <button className="upload-button" type="submit">submit</button>
+            {uploadSuccess && <div className="form-group">Upload successful!</div>} 
           </form>
         </div>
         <Navbar />
