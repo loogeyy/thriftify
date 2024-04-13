@@ -10,7 +10,7 @@ function UploadPage({ addClothes }) {
   const [brand, setBrand] = useState('');
   const [condition, setCondition] = useState('');
 
-  const categories = ['Shirt', 'Pants', 'Shoes', 'Dress']; // Example categories
+  const categories = ['Shirt', 'Pants', 'Shoes', 'Dress', 'Shorts', 'Skirt', 'Outerwear']; // Example categories
   const sizes = ['XS', 'S', 'M', 'L', 'XL']; // Example sizes
   const conditions = ['Poor', 'Average', 'Excellent']; // Example conditions
 
