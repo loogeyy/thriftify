@@ -6,7 +6,7 @@
 .title-container {
   padding-top: 35px;
   background-color: #f5f5f5;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 
 .none {
@@ -16,17 +16,36 @@
   text-align: center;
 }
 
+.col {
+  font-size: 12px;
+}
+
+.col-cat {
+  font-size: 12px;
+  margin-top: 10%;
+}
+
 .item-container {
+  width: 45%;
+  margin: 2.5%;
+  float: left;
+  box-sizing: border-box;
   background-color: rgb(231, 231, 241);
   border: none;
   border-radius: 8px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   margin-bottom: 10px;
   padding: 10px;
   justify-content: space-between;
   align-items: center;
   font-family:"Jost";
   color:#3C0E61;
+}
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .item-container .row.item {
@@ -49,39 +68,35 @@
   font-size: 20px;
 }
 
-/* .item-container .row .col .sold-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-} */
-
-/* .item-container .row .col .sold-btn:focus,
-.item-container .row .col .sold-btn:active {
-  outline: none;
-  width: 40px;
-  height: 40px;
-} */
-
 .sold-btn-img {
   max-width: 30px;
   max-height: 30px;
-  /* margin-top: -50px; */
 }
 
-.sold-button {
+.sold-button-top {
+  margin-top: 15%;
   padding: 3px 8px;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 600;
   background-color: #c4b5d7;
   color: #3C0E61;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 20px;
 }
 
-.sold-button:hover {
-  background-color: #3C0E61;
-  color: #c4b5d7;
+.sold-button-bot {
+  margin-top: 3%;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: #c4b5d7;
+  color: #3C0E61;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 90px;
+  height: 20px;
 }
