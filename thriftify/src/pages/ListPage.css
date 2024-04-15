@@ -100,3 +100,7 @@
   width: 90px;
   height: 20px;
 }
+
+.view-offers-link {
+  text-decoration: none; /* Remove underline */
+}

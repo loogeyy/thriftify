@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Offers.css';
@@ -8,11 +8,21 @@ import rightArrow from '../components/right-arrow.png';
 import rightArrowLight from '../components/right-arrow-light.png';
 import leftArrow from '../components/left-arrow.png';
 import leftArrowLight from '../components/left-arrow-light.png';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate} from 'react-router-dom';
 import uploadIcon from '../components/upload-icon.png';
 import sadIcon from '../components/sad-face.png';
 
 const Offers = ({ clothesList, index, changeIndex }) => {
+
+  const navigate = useNavigate();
+
+  const { itemIndex } = useParams(); // Extract item index from URL parameter
+  // Convert itemIndex to a number
+  const selectedIndex = parseInt(itemIndex, 10) || 0;
+  useEffect(() => {
+    // Set the index of the selected item
+    changeIndex(selectedIndex);
+  }, [changeIndex, selectedIndex]);
 
   const [startX, setStartX] = useState(null);
   const containerRef = useRef(null);
@@ -60,13 +70,17 @@ const Offers = ({ clothesList, index, changeIndex }) => {
 
   const handlePrevClick = () => {
     if (clothesList && clothesList.length > 1) {
-      changeIndex((index - 1 + clothesList.length) % clothesList.length);
+      const newIndex = (index - 1 + clothesList.length) % clothesList.length;
+      changeIndex(newIndex);
+      navigate(`/offers/${newIndex}`);
     }
   };
 
   const handleNextClick = () => {
     if (clothesList && clothesList.length > 1) {
-      changeIndex((index + 1) % clothesList.length);
+      const newIndex = (index + 1) % clothesList.length;
+      changeIndex(newIndex);
+      navigate(`/offers/${newIndex}`); // Update the URL
     }
   };
 
@@ -138,16 +152,16 @@ const Offers = ({ clothesList, index, changeIndex }) => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}>
               <div className='col-auto text-center arrows'>
-                <button className="card-btn" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2}>
-                  <img className='arrow' src={!clothesList || clothesList.length < 2 ? leftArrowLight : leftArrow} alt="left arrow" />
+                <button className="card-btn" onClick={handlePrevClick} disabled={!clothesList || clothesList.length < 2 || index === 0}>
+                  <img className='arrow' src={!clothesList || clothesList.length < 2 || index === 0 ? leftArrowLight : leftArrow} alt="left arrow" />
                 </button>
               </div>
               <div className='col'>
                 <ItemCard clothesList={clothesList} currentCardIndex={index}></ItemCard>
               </div>
               <div className='col-auto text-center arrows'>
-                <button className="card-btn" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2}>
-                  <img className='arrow' src={!clothesList || clothesList.length < 2 ? rightArrowLight : rightArrow} alt="right arrow" />
+                <button className="card-btn" onClick={handleNextClick} disabled={!clothesList || clothesList.length < 2 || index === clothesList.length - 1}>
+                  <img className='arrow' src={!clothesList || clothesList.length < 2 || index === clothesList.length - 1 ? rightArrowLight : rightArrow} alt="right arrow" />
                 </button>
               </div>
             </div>
