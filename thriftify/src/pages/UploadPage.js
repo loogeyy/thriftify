@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './UploadPage.css'; // Import CSS file
 import Navbar from '../components/Navbar.js';
+import { useNavigate } from 'react-router-dom';
 
-function UploadPage({ addClothes }) {
+function UploadPage({ addClothes, clothesList }) {
   const [item, setItem] = useState('');
   const [category, setCategory] = useState('');
   const [size, setSize] = useState('');
@@ -39,6 +40,8 @@ function UploadPage({ addClothes }) {
     setCondition(event.target.value);
   };
 
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const clothes = { item, category, size, color, brand, condition };
@@ -51,6 +54,12 @@ function UploadPage({ addClothes }) {
     setCondition('');
     setUploadSuccess(true); // Set upload success to true when the form is submitted
     // Reset upload success after some time (e.g., 3 seconds)
+
+    const newIndex = clothesList.length;
+    // Use navigate to navigate to the desired URL
+    navigate(`/offers/${newIndex}`);
+
+
     setTimeout(() => {
       setUploadSuccess(false);
     }, 3000);

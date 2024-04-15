@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from '../components/Navbar.js';
 import './ListPage.css';
 import { Link } from 'react-router-dom';
@@ -53,12 +54,9 @@ function ListPage({ clothesList, removeClothes, index, changeIndex }) {
                 </div>
                 <div className="row">
                   <div className="col text-center">
-                    <button
-                      className="sold-button-top"
-                      onClick={() => findIndexByItemName(clothes.item)}
-                    >
+                    <Link to={`/offers/${i}`} className="sold-button-top view-offers-link">
                       view offers
-                    </button>
+                    </Link>
                   </div>
                   <div className="col text-center">
                     <button

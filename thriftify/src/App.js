@@ -1,16 +1,12 @@
 // import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Home from './pages/Home';
 import Offers from './pages/Offers';
 import UploadPage from './pages/UploadPage';
 import ListPage from './pages/ListPage';
-
-import React, { useState } from 'react';
-// import UploadPage from './UploadPage';
-// import ListPage from './ListPage';
-// import Navbar from '../components/Navbar.js';
 
 function App() {
   const [clothesList, setClothesList] = useState([]);
@@ -33,8 +29,8 @@ function App() {
     <Router>
         <Routes>
           <Route path="/thriftify" element={<Home />} />
-          <Route path="/offers" element={<Offers clothesList={clothesList} index={index} changeIndex={changeIndex}/>} />
-          <Route path="/upload" element={<UploadPage addClothes={addClothes}/>} />
+          <Route path="/offers/:itemIndex?" element={<Offers clothesList={clothesList} index={index} changeIndex={changeIndex}/>} />
+          <Route path="/upload" element={<UploadPage addClothes={addClothes} clothesList={clothesList} />} />
           <Route path="/list" element={<ListPage clothesList={clothesList} removeClothes={removeClothes} index={index} changeIndex={changeIndex}/>} />
         </Routes>
     </Router>
