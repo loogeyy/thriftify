@@ -7,6 +7,10 @@ import Home from './pages/Home';
 import Offers from './pages/Offers';
 import UploadPage from './pages/UploadPage';
 import ListPage from './pages/ListPage';
+import OffersAlt from './pages/Offers-alt';
+// import UploadPage from './UploadPage';
+// import ListPage from './ListPage';
+// import Navbar from '../components/Navbar.js';
 
 function App() {
   const [clothesList, setClothesList] = useState([]);

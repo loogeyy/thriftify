@@ -53,7 +53,7 @@ const Offers = ({ clothesList, index, changeIndex }) => {
                         <div key={innerIndex} className="store-item alternate">
                           <div className="row text-center align-items-center justify-content-center">
                             <p className="store-name-alt text-center">{store.name}</p>
-                            <p className="">{storesData[outerIndex].distance} miles</p>
+                            <p className="">{storesData[innerIndex].distance} miles</p>
                             <p className="">${store.priceLow} - ${store.priceHigh}</p>
                           </div>
                         </div>
