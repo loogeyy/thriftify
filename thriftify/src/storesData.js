@@ -626,7 +626,7 @@ const storesData =
         ]
     },
     {
-      "name": "Pavement",
+      "name": "Longhorn Thrift",
       "distance": 6.1,
       "brands":
         [
