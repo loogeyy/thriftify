@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/thriftify/static/css/main.f7f8c09f.css",
-    "main.js": "/thriftify/static/js/main.8ed55868.js",
+    "main.css": "/thriftify/static/css/main.b75e6817.css",
+    "main.js": "/thriftify/static/js/main.09884d6f.js",
     "static/js/453.2217c168.chunk.js": "/thriftify/static/js/453.2217c168.chunk.js",
     "static/media/logo.png": "/thriftify/static/media/logo.e44454d5f71965adc2a0.png",
     "static/media/offers-icon.png": "/thriftify/static/media/offers-icon.095ba06fdef58bc522cb.png",
     "static/media/upload-icon.png": "/thriftify/static/media/upload-icon.a342b3450c78cea2a95e.png",
     "index.html": "/thriftify/index.html",
-    "main.f7f8c09f.css.map": "/thriftify/static/css/main.f7f8c09f.css.map",
-    "main.8ed55868.js.map": "/thriftify/static/js/main.8ed55868.js.map",
+    "main.b75e6817.css.map": "/thriftify/static/css/main.b75e6817.css.map",
+    "main.09884d6f.js.map": "/thriftify/static/js/main.09884d6f.js.map",
     "453.2217c168.chunk.js.map": "/thriftify/static/js/453.2217c168.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7f8c09f.css",
-    "static/js/main.8ed55868.js"
+    "static/css/main.b75e6817.css",
+    "static/js/main.09884d6f.js"
   ]
 }
